@@ -1,0 +1,52 @@
+{
+  "name": "@sapt/analytics",
+  "version": "0.1.0",
+  "description": "Lightweight analytics SDK for Sapt. Drop-in script tag or programmatic client for pageviews, clicks, scroll depth, engagement, and custom events.",
+  "type": "module",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sapt-ai-org/analytics-sdk.git"
+  },
+  "homepage": "https://github.com/sapt-ai-org/analytics-sdk#readme",
+  "bugs": {
+    "url": "https://github.com/sapt-ai-org/analytics-sdk/issues"
+  },
+  "keywords": [
+    "analytics",
+    "sapt",
+    "tracking",
+    "pageview",
+    "shopify",
+    "marketing"
+  ],
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "exports": {
+    ".": {
+      "import": "./dist/analytics/index.js",
+      "types": "./dist/analytics/index.d.ts",
+      "default": "./dist/analytics/index.js"
+    },
+    "./core": {
+      "import": "./dist/core/index.js",
+      "types": "./dist/core/index.d.ts",
+      "default": "./dist/core/index.js"
+    }
+  },
+  "main": "./dist/analytics/index.js",
+  "types": "./dist/analytics/index.d.ts",
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "npm run build"
+  },
+  "devDependencies": {
+    "tsup": "^8.0.0",
+    "typescript": "^5"
+  }
+}
